@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>auther dash</h1>
+    <a href="/auther/create">add_post</a>
+    <% data.forEach((ele)=>{ %>
+       <h2><%=ele.title%></h2> 
+       <img src="/<%=ele.pic%>" alt="pic">
+       <p><%=ele.desc%></p>
+       <a href="/auther/read/<%=ele._id%>">show details</a>
+        <a href="/auther/update/<%=ele._id%>">update</a>
+        <a href="/auther/delete/<%=ele._id%>">delete</a>
+   <% }) %>
+</body>
+</html>
